@@ -13,7 +13,7 @@ let famousAF = [
     {
         title: "Jedi  Master",
         name: "Trey Anastasio",
-        bio: "whatever you do, take care of your shoes",
+        bio: "Whatever you do, take care of your shoes",
         image: "http://www.jambands.com/images/2016/12/13/61736/DSC_20132.jpg",
         lifespan: {
             birth: 1964,
@@ -78,4 +78,16 @@ for (let i = 0; i < famousAF.length; i++) {
     famousAFContainer.appendChild(lifespan);
     console.log(famousAFContainer );
     
+    // Create elements for name and bio
+    let h1 = document.createElement("h1");
+    let name = document.createTextNode(`${famousAF[i].name}`);
+    h1.appendChild(name);
+    header.appendChild(h1);
+    
+    let h2 = document.createElement("h2");
+    let famouseAFBio = document.createTextNode(`${famousAF[i].bio}`);
+    h2.appendChild(famouseAFBio);
+    bio.appendChild(h2)
+
+
 }
