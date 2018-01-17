@@ -26,7 +26,7 @@ let famousAF = [
         title: "His Airness",
         name: "Micheal Jordan",
         bio: "Some people want it to happen, some wish it would happen, others make it happen",
-        image: "http://a.espncdn.com/photo/2013/0209/nba_jordan_12.jpg",
+        image: "http://www.guinnessworldrecords.com/Images/Michael-Jordan-main_tcm25-15662.jpg",
         lifespan: {
             birth: 1963,
             death: 2038
@@ -78,16 +78,27 @@ for (let i = 0; i < famousAF.length; i++) {
     famousAFContainer.appendChild(lifespan);
     console.log(famousAFContainer );
     
-    // Create elements for name and bio
+    // Create elements for name and title
     let h1 = document.createElement("h1");
     let name = document.createTextNode(`${famousAF[i].name}`);
     h1.appendChild(name);
     header.appendChild(h1);
     
     let h2 = document.createElement("h2");
-    let famouseAFBio = document.createTextNode(`${famousAF[i].bio}`);
-    h2.appendChild(famouseAFBio);
-    bio.appendChild(h2)
+    let title = document.createTextNode(`${famousAF[i].title}`);
+    h2.appendChild(title);
+    header.appendChild(h2);
 
+    // Add pic
+    bio.innerHTML = `<img src="${famousAF[i].image}">`
 
+    // Create elements bio
+    let p = document.createElement("p");
+    let famousAFBio = document.createTextNode(`${famousAF[i].bio}`);
+    p.appendChild(famousAFBio);
+    bio.appendChild(p)
+
+    // Add lifespan
+    
+   
 }
